@@ -17,6 +17,10 @@
       align-items: center;
       height: 100vh;
     }
+
+    .icon-large {
+      font-size: 15rem;
+    }
   </style>
 </head>
 <body>
@@ -24,11 +28,8 @@
   <h1 class="display-4 mt-4 mb-5">Weather Data for [[${city}]]</h1>
   <div class="row">
     <div class="col-sm-6 mx-auto">
+      <i th:class="'wi wi-owm-' + ${weather.weather[0].id} + ' icon-large mb-3'"></i>
       <p class="lead">Temperature: [[${weather.main.temp}]]&deg;F</p>
-      <img th:src="@{|http://openweathermap.org/img/w/${weather.weather[0].icon}.png|}"
-           alt="Weather Icon" class="img-fluid mx-auto d-block"/>
-      <i th:class="'wi wi-owm-' + ${weather.weather[0].id}"></i>
-      <i class="wi wi-owm-200"></i>
       <p class="lead">Description: [[${weather.weather[0].description}]]</p>
     </div>
   </div>
