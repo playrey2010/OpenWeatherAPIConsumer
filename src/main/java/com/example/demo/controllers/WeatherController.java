@@ -26,7 +26,7 @@ public class WeatherController {
         model.addAttribute("weather", weatherResponse);
         model.addAttribute("city", city);
 
-        System.out.println("The name is " + weatherResponse.getName());
+
         return "weather";
     }
 }
