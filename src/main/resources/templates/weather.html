@@ -16,11 +16,15 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      background-color: #f0f0f0;
     }
 
+
     .icon-large {
-      font-size: 15rem;
+      font-size: 12rem;
+      color: #0066cc;
     }
+
   </style>
 </head>
 <body>
@@ -29,8 +33,10 @@
   <div class="row">
     <div class="col-sm-6 mx-auto">
       <i th:class="'wi wi-owm-' + ${weather.weather[0].id} + ' icon-large mb-3'"></i>
-      <p class="lead">Temperature: [[${weather.main.temp}]]&deg;F</p>
-      <p class="lead">Description: [[${weather.weather[0].description}]]</p>
+      <p class="lead font-weight-bold text-uppercase text-muted">Temperature:</p>
+      <p class="display-4 font-weight-bold text-info">[[${weather.main.temp}]]&deg;F</p>
+      <p class="lead font-weight-bold text-uppercase text-muted">Description:</p>
+      <p class="lead font-weight-bold text-capitalize">[[${weather.weather[0].description}]]</p>
     </div>
   </div>
 </div>
