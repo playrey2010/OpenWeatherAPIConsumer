@@ -9,10 +9,10 @@
         crossorigin="anonymous">
   <style>
     body {
-      display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      background-color: #f0f0f0;
     }
     form {
       margin-top: 2rem;
@@ -21,6 +21,10 @@
   </style>
 </head>
 <body>
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" th:href="@{/}">Weather App</a>
+</nav>
 <div class="container text-center">
   <h1 class="display-4 mt-5">Get Weather Data</h1>
   <form method="post" class="mx-auto" th:action="@{/weather}">
